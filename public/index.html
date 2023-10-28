@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadowfighters Milano</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<div id="upbarpc" class="h-[10%] w-full flex justify-center items-center">
+    <div id="logocontainer" class="w-[50%] h-full">
+        <img src="img/shadowfighterslogo.png" class="h-[100%] ml-[1%]">
+    </div>
+    <div id="optionscontainer" class="w-[50%] h-full">
+        <div class="option">
+            CHI SIAMO
+        </div>
+    </div>
+</div>
+<div id="upbarphone" class="h-[10%] w-full flex justify-center items-center">
+    <div id="logocontainer" class="w-[75%] mr-[5%] h-full flex items-center text-center">
+        <img src="img/shadowfighterslogo.png" class="h-[110%] ml-[1%]">
+    </div>
+    <div id="optionscontainer" class="w-[12%] h-full relative flex justify-center items-center">
+        <div id="optionbutton" class="flex justify-center items-center h-[50%] w-[100%] border-[3px] px-[8%] rounded-lg border-[white]">
+            <img id="optionbuttonicon" src="img/menu.png" class="h-full pointer-events-none" >
+        </div>
+    </div>
+    <div id="options" class="absolute right-[5%] top-[10%] rounded-lg w-[50%] h-0 max-h-[60%] bg-white text-[#8d8d8d] overflow-hidden">
+        <div to="chi_siamo" class="option w-full font-bold text-[4.5vw] h-[45px] border-b-2 border-[#ddd8d8] flex justify-center items-center">
+            CHI SIAMO
+        </div>
+        <div to="maggiori_info" class="option w-full font-bold text-[4.5vw] h-[45px] border-b-2 border-[#ddd8d8] flex justify-center items-center">
+            MAGGIORI INFO
+        </div>
+        <div to="serve_aiuto" class="option w-full font-bold text-[4.5vw] h-[45px] border-b-2 border-[#ddd8d8] flex justify-center items-center">
+            CONTATTACI
+        </div>
+        <div to="social" class="option w-full font-bold text-[4.5vw] h-[45px] border-b-2 border-[#ddd8d8] flex justify-center items-center">
+            SOCIAL
+        </div>
+    </div>
+</div>
+<body class="overflow-hidden">
+    <div id="container" class="w-full h-full overflow-hidden">
+        <div id="home" class="w-full h-[90%] overflow-auto">
+            <div id="slogan" class="text-[#ffffff] italic text-[3vw] w-full mt-[2%] text-center">
+                La vita inizia quando la paura finisce
+            </div>
+            <br>
+            <div id="chi_siamo">
+                <h1 id="title" class="text-[#CDA434] text-[4vw] font-bold w-full text-center">CHI SIAMO</h1>
+            </div>
+            <div id="desc" class="text-[4vw] w-[90%] text-center text-[#b3b3b3] ml-[5%]">
+                Siamo un gruppo di persone che si sono stancate di vedere violenze, 
+                aggressioni e furti nelle nostre città,
+                ma soprattutto ci siamo stancati di non sentirci più al sicuro e liberi di uscire di casa.
+                <br>
+                <br>
+                Sembra che ci abbiano lasciato soli e che si rimanga ormai impassibili di fronte a fenomeni di questo tipo.
+                <br>
+                <br>
+                Abbiamo deciso di dire BASTA e di farci portavoce di questo messaggio
+                <br>
+                <br>
+                Vogliamo combattere ciò che viene lasciato nell'ombra, ciò di cui non si vuole parlare, e da qui deriva il nostro nome:
+                <br>
+                <span class="font-bold">SHADOWFIGHTERS</span>
+                <br>
+                <br>
+            </div>
+            <div id="maggiori_info">
+                <h1 id="title" class="text-[#CDA434] text-[4vw] font-bold w-full text-center">MAGGIORI INFO</h1>
+            </div>
+            <div id="desc" class="text-[4vw] w-[90%] text-center text-[#b3b3b3] ml-[5%]">
+                Vogliamo agire in modo no violento per combattere la violenza, ma soprattutto abbiamo tanti progetti e idee che potrbbero cambiare veramnte le cose.
+                <br>
+                <br>
+                Siamo per la trasparenza e ci stiamo muovendo affinché le cose cambino con alcuni progetti che condivideremo appena possibile
+            </div>
+            <div id="separator" class="border-t-2 mt-[10%]"></div>
+            <div id="serve_aiuto">
+                <h2 id="title" class="text-[#CDA434] text-[3vw] font-bold w-full text-center">SERVE AIUTO? CONTATTACI</h2>
+            </div>
+            <div class="textn text-white text-[1.5vw] w-[80%] ml-[10%] text-center">
+                Se hai bisogno di aiuto o vuoi conttattarci per qualunque motivo compila i seguenti campi.
+            </div>
+            <div class="w-[90%] mt-[2%] ml-[5%] flex justify-center items-center flex-col">
+                <div class="textn text-[#CDA434] text-[1.5vw] ml-2 w-[80%] text-left">
+                    Nome: 
+                </div>
+                <input type="text" class="text-white w-[80%] text-[4vw]" placeholder="Inserisci il tuo Nome">
+                <div class="textn text-[#CDA434] text-[1.5vw] ml-2 w-[80%] text-left mt-[3%]">
+                    Email: 
+                </div>
+                <input type="email" class="text-white w-[80%] text-[4vw]" placeholder="Inserisci una email valida">
+                <div class="textn text-[#CDA434] text-[1.5vw] ml-2 w-[80%] text-left mt-[3%]">
+                    Descrizione: 
+                </div>
+                <textarea class="text-white w-[80%] text-[4vw]" rows="7" placeholder="Inserisci una Descrizione del problema"></textarea>
+                <div id="sendemail" class="textn w-[80%] text-white bg-[#CDA434] mt-[3%] font-bold text-[1.5vw] p-[3%] flex justify-center items-center rounded-[10px]  hover:scale-110 transitio-[0.5s]">
+                    INVIA
+                </div>
+            </div>
+            <div id="social" class="textn text-[#CDA434] text-[1.5vw] w-[80%] mt-[6%] mb-[2%] ml-[10%] text-center">
+                Seguici anche sui nostri social.
+            </div>
+            <div id="endbar" class="w-full mb-[25%] mt-[3%] flex justify-around items-center">
+                <a href="https://www.instagram.com/shadowfighters_milano/?utm_source=ig_web_button_share_sheet&igshid=ODE2OTA4Y2Y1MQ==" target="_blank" class="w-[13%] flex justify-center items-center flex-col hover:scale-110 transitio-[0.5s] ">
+                    <img src="img/instagram.png" class="socialicons w-[100%]">
+                    <div class="textn text-white font-bold text-[1.5vw]">
+                        Instagram
+                    </div>
+                </a>
+                <a href="https://www.tiktok.com/@bravepanchshadowfighters" target="_blank" class="w-[13%] flex justify-center items-center flex-col hover:scale-110 transitio-[0.5s]">
+                    <img src="img/tiktok.png" class="socialicons w-[100%]">
+                    <div class="textn text-white font-bold text-[1.5vw]">
+                        TikTok
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const optionbuttonelement = $("#optionbutton");
+        const optionselement = document.getElementById("options");
+        var optionsOpen = false
+
+        $("#sendemail").click((e) => {
+            Email.send({
+                Host: "sandbox.smtp.mailtrap.io", 
+                Username: "3413441639b1c3", 
+                Password: "0c3ca096024d54",
+                To : 'mike15intanno@gmail.com',
+                From : "mike15intanno@gmail.com",
+                Subject : "Test email",
+                Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
+            }).then(message => alert(message)
+            );
+        })
+
+        if (optionbuttonelement) {
+            const optioniconelement = document.getElementById("optionbuttonicon");
+            optionbuttonelement.click((e) => {
+                if (optionsOpen) {
+                    optioniconelement.setAttribute("src", "img/menu.png")
+                    optioniconelement.style.height = "100%"
+                    optionselement.style.height = "0"
+                    optionselement.style.overflow ="hidden";
+
+                }else {
+                    optioniconelement.setAttribute("src", "img/close.png")
+                    optioniconelement.style.height = "60%"
+                    optionselement.style.height = "70%"
+                    optionselement.style.overflow ="auto";
+                    // optionselement
+                }
+                optionsOpen = !optionsOpen
+            })
+            $("input").focusout((e) => {
+                window.scrollTo(0, 0);
+            })
+            $(".option").click((e) => {
+                let to = e.target.getAttribute("to")
+                let doc = document.getElementById(to)
+                var top = doc.offsetTop - 70;
+                $('#home').animate({scrollTop:top}, 500);
+                optioniconelement.setAttribute("src", "img/menu.png")
+                optioniconelement.style.height = "100%"
+                optionselement.style.height = "0"
+                optionselement.style.overflow ="hidden";
+                optionsOpen = false
+            })
+        }
+    </script>
+</body>
+</html>
