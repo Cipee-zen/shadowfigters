@@ -10,7 +10,6 @@ app.get("/", (req, res) => {
 })
 
 app.post("/contact", (req, res) => {
-    console.log(process.env.MAIL)
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
@@ -20,6 +19,8 @@ app.post("/contact", (req, res) => {
       });
       
 })
+
+console.log(process.env.MAIL)
 
 
 app.listen(process.env.PORT || 3000, (req, res) => {
