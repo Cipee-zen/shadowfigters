@@ -91,15 +91,15 @@
                 <div class="textn text-[#CDA434] text-[1.5vw] ml-2 w-[80%] text-left">
                     Nome: 
                 </div>
-                <input type="text" class="text-white w-[80%] text-[4vw]" placeholder="Inserisci il tuo Nome">
+                <input id="contactname" type="text" class="text-white w-[80%] text-[4vw]" placeholder="Inserisci il tuo Nome">
                 <div class="textn text-[#CDA434] text-[1.5vw] ml-2 w-[80%] text-left mt-[3%]">
                     Email: 
                 </div>
-                <input type="email" class="text-white w-[80%] text-[4vw]" placeholder="Inserisci una email valida">
+                <input id="contactemail" type="email" class="text-white w-[80%] text-[4vw]" placeholder="Inserisci una email valida">
                 <div class="textn text-[#CDA434] text-[1.5vw] ml-2 w-[80%] text-left mt-[3%]">
                     Descrizione: 
                 </div>
-                <textarea class="text-white w-[80%] text-[4vw]" rows="7" placeholder="Inserisci una Descrizione del problema"></textarea>
+                <textarea id="contactdescription" class="text-white w-[80%] text-[4vw]" rows="7" placeholder="Inserisci una Descrizione del problema"></textarea>
                 <div id="sendemail" class="textn w-[80%] text-white bg-[#CDA434] mt-[3%] font-bold text-[1.5vw] p-[3%] flex justify-center items-center rounded-[10px]  hover:scale-110 transitio-[0.5s]">
                     INVIA
                 </div>
@@ -123,57 +123,6 @@
             </div>
         </div>
     </div>
-    <script>
-        const optionbuttonelement = $("#optionbutton");
-        const optionselement = document.getElementById("options");
-        var optionsOpen = false
-
-        $("#sendemail").click((e) => {
-            Email.send({
-                Host: "sandbox.smtp.mailtrap.io", 
-                Username: "3413441639b1c3", 
-                Password: "0c3ca096024d54",
-                To : 'mike15intanno@gmail.com',
-                From : "mike15intanno@gmail.com",
-                Subject : "Test email",
-                Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>"
-            }).then(message => alert(message)
-            );
-        })
-
-        if (optionbuttonelement) {
-            const optioniconelement = document.getElementById("optionbuttonicon");
-            optionbuttonelement.click((e) => {
-                if (optionsOpen) {
-                    optioniconelement.setAttribute("src", "img/menu.png")
-                    optioniconelement.style.height = "100%"
-                    optionselement.style.height = "0"
-                    optionselement.style.overflow ="hidden";
-
-                }else {
-                    optioniconelement.setAttribute("src", "img/close.png")
-                    optioniconelement.style.height = "60%"
-                    optionselement.style.height = "70%"
-                    optionselement.style.overflow ="auto";
-                    // optionselement
-                }
-                optionsOpen = !optionsOpen
-            })
-            $("input").focusout((e) => {
-                window.scrollTo(0, 0);
-            })
-            $(".option").click((e) => {
-                let to = e.target.getAttribute("to")
-                let doc = document.getElementById(to)
-                var top = doc.offsetTop - 70;
-                $('#home').animate({scrollTop:top}, 500);
-                optioniconelement.setAttribute("src", "img/menu.png")
-                optioniconelement.style.height = "100%"
-                optionselement.style.height = "0"
-                optionselement.style.overflow ="hidden";
-                optionsOpen = false
-            })
-        }
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
